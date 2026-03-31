@@ -213,7 +213,7 @@ export default function Hero() {
             <div className="relative w-60 h-72 sm:w-64 sm:h-80 md:w-72 md:h-88 glass-cream rounded-[2.4rem] shadow-soft overflow-hidden border-soft">
               <div className="absolute inset-0 bg-gradient-to-br from-peach/40 via-transparent to-lavender/40 pointer-events-none" />
               <img
-                src="/my-photo.png"
+                src="my-photo.png"
                 alt="郝洋 · 个人艺术照"
                 className="w-full h-full object-cover"
               />

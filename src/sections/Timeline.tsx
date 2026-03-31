@@ -12,7 +12,7 @@ const timelineData = [
     title: '学会组织的第一群人',
     description:
       '班长、升旗手、永远被点名的小小开心果。后来发现，只要一组织活动，我总会自然站到最中间。',
-    image: '/timeline-1.jpg',
+    image: 'timeline-1.jpg',
     side: 'left',
     color: 'blush',
   },
@@ -22,7 +22,7 @@ const timelineData = [
     title: '开始向外看',
     description:
       '我的少女追星时代，墙上贴满海报，手机里全是应援歌。从那时起，喜欢一件事就会全力以赴。',
-    image: '/timeline-2.jpg',
+    image: 'timeline-2.jpg',
     side: 'right',
     color: 'lavender',
   },
@@ -32,7 +32,7 @@ const timelineData = [
     title: '带领的压力与快感',
     description:
       '在高考倒计时牌子下面，一边刷题一边想：以后我要去哪里。压力很大，但也第一次学会和自己慢慢和解。',
-    image: '/timeline-3.jpg',
+    image: 'timeline-3.jpg',
     side: 'left',
     color: 'peach',
   },
@@ -42,7 +42,7 @@ const timelineData = [
     title: '法语是新的组织工具',
     description:
       '在北外学法语、混在国庆方阵和彩排的人群里。语言、队形、节奏，慢慢变成我组织一切的“新工具”。',
-    image: '/timeline-4.jpg',
+    image: 'timeline-4.jpg',
     side: 'right',
     color: 'mint',
   },
@@ -52,7 +52,7 @@ const timelineData = [
     title: '回到起点，但带着工具',
     description:
       '每天面对100+人，把流程尽量讲成“聊天”。下班之后继续当人类活动策划：读书会、健身局，还有下一次出游的小计划。',
-    image: '/timeline-5.jpg',
+    image: 'timeline-5.jpg',
     side: 'left',
     color: 'blush-dark',
   },
