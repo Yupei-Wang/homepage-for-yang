@@ -68,7 +68,7 @@ function App() {
             </span>
             <span className="text-stone/30">·</span>
             <span className="font-mono text-sm text-stone-soft">
-              审批局职员 / 法语译者 / 旅行者 / 组织者
+              白天上班族 / 法语译者 / 旅行者 / 组织者
             </span>
           </div>
           <div className="flex items-center gap-6">

@@ -8,8 +8,8 @@ gsap.registerPlugin(ScrollTrigger);
 const cards = [
   {
     id: 1,
-    title: '跟我去审批局',
-    subtitle: '看看体制内的一天如何过',
+    title: '跟我去上班',
+    subtitle: '看看我白天是怎么工作的',
     image: 'card-office.jpg',
     action: '进入',
     gradient: 'from-blush to-lavender',

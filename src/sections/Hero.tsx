@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ChevronDown, Sparkles } from 'lucide-react';
 
-const subtitles = ['审批局职员', '法语译者', '旅行者', '组织者'];
+const subtitles = ['白天上班族', '法语译者', '旅行者', '组织者'];
 
 export default function Hero() {
   const heroRef = useRef<HTMLDivElement>(null);

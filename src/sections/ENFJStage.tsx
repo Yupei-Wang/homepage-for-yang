@@ -24,7 +24,7 @@ const enfjData = [
     subtitle: 'Intuition',
     quote: '我看向可能性的方向',
     content: {
-      idea: '如果把审批局的等待时间变成阅读时间...',
+      idea: '如果把排队等待的时间悄悄变成阅读时间...',
       description: '思维地图：当前在思考的话题',
     },
     icon: Lightbulb,

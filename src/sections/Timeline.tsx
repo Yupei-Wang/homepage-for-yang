@@ -48,7 +48,7 @@ const timelineData = [
   },
   {
     year: '2022-至今',
-    location: '沙河市审批局',
+    location: '沙河市某城市服务窗口',
     title: '回到起点，但带着工具',
     description:
       '每天面对100+人，把流程尽量讲成“聊天”。下班之后继续当人类活动策划：读书会、健身局，还有下一次出游的小计划。',
@@ -179,7 +179,7 @@ export default function Timeline() {
             人生<span className="text-gradient-warm">时间轴</span>
           </h2>
           <p className="font-sans text-stone-soft max-w-md mx-auto">
-            从班长到审批局职员，一路走来的成长轨迹
+            从小镇女孩到城市上班族，这是我自己的小小人生时间轴
           </p>
         </div>
 
