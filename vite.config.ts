@@ -4,7 +4,8 @@ import { defineConfig } from "vite"
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: './',
+  // 部署到 https://Yupei-Wang.github.io/homepage-for-yang/
+  base: '/homepage-for-yang/',
   plugins: [react()],
   resolve: {
     alias: {
