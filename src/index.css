@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* ins + 品牌站风：明亮、丰富、带舞台感 */
+    --background: 40 35% 98%;
+    --foreground: 230 15% 16%;
+    --card: 0 0% 100%;
+    --card-foreground: 230 15% 16%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 230 15% 16%;
+    --primary: 10 75% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 35 24% 93%;
+    --secondary-foreground: 230 15% 16%;
+    --muted: 30 20% 94%;
+    --muted-foreground: 230 9% 46%;
+    --accent: 10 75% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 28 16% 86%;
+    --input: 28 16% 86%;
+    --ring: 10 75% 60%;
+    --radius: 1.5rem;
+    
+    /* 品牌色（单一主色 + 少量辅助） */
+    --blush-pink: #f26b5f;   /* 主色：珊瑚红 */
+    --soft-rose: #f58a7f;
+    --lavender: #e5deee;    /* 极浅，只做背景块 */
+    --soft-purple: #b1a6c7;
+    --mint: #dde8e3;        /* 极浅辅助 */
+    --soft-teal: #a4bbb2;
+    --peach: #f2ddc4;
+    --soft-coral: #f0b39a;
+    --cream: #f7f3ec;
+    --warm-white: #fdfbf7;
+    --soft-gray: #87828f;
+    --charcoal: #2f2a36;
+    
+    /* 渐变组合：大气但不过度花哨 */
+    --gradient-soft: linear-gradient(135deg, #fffdf8 0%, #f7e8d3 42%, #f3ece2 100%);
+    --gradient-warm: linear-gradient(135deg, #f26b5f 0%, #f58a7f 40%, #f3d6b3 100%);
+    --gradient-dreamy: linear-gradient(135deg, #fffdf9 0%, #f6e4d6 35%, #ece5f3 100%);
+    
+    /* 缓动函数 */
+    --ease-expo-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-[#f7f3ec] text-[#2f2a36] antialiased;
+    font-family: 'Inter', sans-serif;
+    background: 
+      radial-gradient(80rem 44rem at 10% -10%, rgba(242, 107, 95, 0.12) 0%, transparent 60%),
+      radial-gradient(60rem 30rem at 100% 0%, rgba(240, 179, 154, 0.2) 0%, transparent 62%),
+      radial-gradient(72rem 38rem at 50% 100%, rgba(221, 232, 227, 0.95) 0%, transparent 58%),
+      linear-gradient(180deg, #fdfbf7 0%, #f7f3ec 35%, #f4efe7 100%),
+      #f7f3ec;
+    background-attachment: fixed;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .font-mono {
+    font-family: 'Space Mono', monospace;
+  }
+}
+
+@layer utilities {
+  /* 高级渐变文字：大气、克制、有焦点 */
+  .text-gradient-soft {
+    background: linear-gradient(120deg, #1f1a25 0%, #5d546e 52%, #f26b5f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-gradient-warm {
+    background: linear-gradient(135deg, #f26b5f 0%, #f29a83 36%, #8f7b66 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-gradient-dreamy {
+    background: linear-gradient(100deg, #22202a 0%, #665c78 45%, #f26b5f 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 4s ease infinite;
+  }
+  
+  /* 立体层次阴影 */
+  .shadow-soft {
+    box-shadow: 
+      0 6px 16px rgba(24, 19, 32, 0.08),
+      0 18px 42px rgba(24, 19, 32, 0.08),
+      0 1px 0 rgba(255, 255, 255, 0.65) inset;
+  }
+  
+  .shadow-soft-hover {
+    box-shadow: 
+      0 10px 22px rgba(24, 19, 32, 0.1),
+      0 24px 54px rgba(24, 19, 32, 0.12),
+      0 0 0 1px rgba(242, 107, 95, 0.18);
+  }
+  
+  /* 玻璃拟态 - 亮色版 */
+  .glass-light {
+    background: linear-gradient(
+      160deg,
+      rgba(255, 255, 255, 0.88) 0%,
+      rgba(255, 255, 255, 0.64) 100%
+    );
+    backdrop-filter: blur(22px) saturate(120%);
+    -webkit-backdrop-filter: blur(22px) saturate(120%);
+    border: 1px solid rgba(255, 255, 255, 0.92);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset;
+  }
+  
+  .glass-cream {
+    background: linear-gradient(
+      160deg,
+      rgba(253, 251, 247, 0.92) 0%,
+      rgba(247, 243, 236, 0.86) 100%
+    );
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+  }
+  
+  /* 细腻边框 */
+  .border-soft {
+    border: 1px solid rgba(0, 0, 0, 0.04);
+  }
+
+  .bg-hero-aura {
+    background:
+      radial-gradient(circle at 20% 20%, rgba(242, 107, 95, 0.18) 0%, transparent 36%),
+      radial-gradient(circle at 80% 22%, rgba(229, 222, 238, 0.5) 0%, transparent 44%),
+      radial-gradient(circle at 50% 80%, rgba(221, 232, 227, 0.56) 0%, transparent 42%);
+  }
+}
+
+/* 动画 */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { 
+    transform: scale(1); 
+    box-shadow: 0 0 0 0 rgba(242, 107, 95, 0.35); 
+  }
+  50% { 
+    transform: scale(1.05); 
+    box-shadow: 0 0 0 8px rgba(242, 107, 95, 0); 
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes wave {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(0.6); }
+}
+
+.animate-float-gentle {
+  animation: float-gentle 6s ease-in-out infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2.5s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 2.5s linear infinite;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  background-size: 200% 100%;
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f7f3ec;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #f26b5f, #f58a7f);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #e05c50, #d2554a);
+}
+
+/* 选择 */
+::selection {
+  background: rgba(242, 107, 95, 0.16);
+  color: #2f2a36;
+}
